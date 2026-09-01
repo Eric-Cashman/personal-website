@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-## A modern, responsive personal portfolio website built with a sleek midnight/slate aesthetic, interactive firefly background effects, and clean editorial layouts.
+ Professional Website to showcase my projects, and skills.
 
 ## Tech Stack
 Framework: React with Vite
