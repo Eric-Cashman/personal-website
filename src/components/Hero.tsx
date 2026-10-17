@@ -19,7 +19,7 @@ export default function Hero() {
 
       <div className="mb-8">
         <a 
-          href="/resume.pdf" 
+          href="https://Eric-Cashman.github.io/personal-website/resume.pdf?v=1" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="inline-block px-7 py-3 border border-[#64ffda] text-[#64ffda] rounded-md hover:bg-[#64ffda]/10 transition-colors font-medium tracking-wide"
@@ -28,7 +28,6 @@ export default function Hero() {
         </a>
       </div>
 
-      {/* Social Icons Sidebar */}
       <div className="fixed bottom-10 right-10 hidden md:flex flex-col items-center space-y-6">
         <a href="https://github.com/Eric-Cashman" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#64ffda] transition-transform hover:-translate-y-1">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

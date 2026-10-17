@@ -1,7 +1,7 @@
-import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ParticleBackground from './components/ParticleBackground';
+import Contact from './Contact';
 
 function About() {
   return (
@@ -81,7 +81,6 @@ function Experience() {
                 {job.description}
               </p>
             </div>
-
           </div>
         ))}
       </div>
@@ -99,34 +98,8 @@ function Projects() {
       tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       github: "https://github.com/Eric-Cashman/personal-website",
       external: "",
-      image: "/photos/portfolio-shot.png" 
+      image: "/personal-website/photos/portfolio-shot.png" 
     },
-    /*
-    {
-      id: 2,
-      title: "",
-      description: "",
-      tech: [""],
-      github: "",
-      external: ""
-    },
-    {
-      id: 3,
-      title: "",
-      description: "",
-      tech: [""],
-      github: "",
-      external: ""
-    },
-    {
-      id: 4,
-      title: "",
-      description: "",
-      tech: [""],
-      github: "",
-      external: ""
-    }
-    */
   ];
 
   return (
@@ -212,6 +185,7 @@ export default function App() {
           <About />
           <Experience />
           <Projects />
+          <Contact />
           
         </main>
       </div>
