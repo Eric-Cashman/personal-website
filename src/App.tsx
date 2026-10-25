@@ -98,7 +98,7 @@ function Projects() {
       tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       github: "https://github.com/Eric-Cashman/personal-website",
       external: "",
-      demo: "", // Added empty demo property
+      demo: "", 
       image: "/personal-website/photos/portfolio-shot.png" 
     },
     {
@@ -108,7 +108,7 @@ function Projects() {
       tech: ["React", "JavaScript", "Python", "Amazon Kiro", "HTML"], 
       github: "https://github.com/Eric-Cashman/wa-kiro-fire",
       external: "",
-      demo: "https://youtu.be/8RNYvv2JVvw", // Added your YouTube link here
+      demo: "https://youtu.be/8RNYvv2JVvw", 
       image: "/personal-website/photos/WAFIREScreenshot.png"
     }
   ];

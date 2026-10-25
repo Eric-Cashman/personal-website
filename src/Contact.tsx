@@ -10,7 +10,7 @@ export default function Contact() {
       </div>
       
       <p className="text-gray-200 max-w-lg text-center mb-12 text-lg">
-        Feel free to contact me for opportunities! My LinkedIn is on the bottom right of the screen, or my email right here I'll try my best to get back to you.
+        Feel free to contact me for opportunities! My LinkedIn & GitHub is on the bottom right of the screen, or my email right here I'll try my best to get back to you.
       </p>
 
       <a 
