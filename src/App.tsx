@@ -1,11 +1,11 @@
-import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ParticleBackground from './components/ParticleBackground';
+import Contact from './Contact';
 
 function About() {
   return (
-    <section id="about" className="py-24 max-w-3xl mx-auto flex flex-col items-center text-center">
+    <section id="about" className="py-4 max-w-3xl mx-auto flex flex-col items-center text-center">
       <div className="flex items-center justify-center mb-10 w-full">
         <div className="h-[1px] bg-gray-800 flex-1 mr-6"></div>
         <h2 className="text-3xl font-bold text-white whitespace-nowrap">
@@ -14,7 +14,7 @@ function About() {
         <div className="h-[1px] bg-gray-800 flex-1 ml-6"></div>
       </div>
       
-      <div className="text-gray-400 text-lg leading-relaxed space-y-4 mx-auto">
+      <div className="text-gray-100 text-lg leading-relaxed space-y-4 mx-auto">
         <p>
           Hello everyone! I am a developer based in the Seattle, Washington area!
         </p>
@@ -22,7 +22,7 @@ function About() {
           I am currently going for my Bachelor's in Application Development at North Seattle College. I became curious about programming while during High School when my friend built a mod for a game we played, and it completely made life easier for us. I wanted to learn how to do that, which brought me here today.
         </p>
         <p>
-          Favorite hobbies include: Walking, hanging out with friends, and learning new things!
+          Favorite hobbies include: Walking, hanging out with friends, finding new ways to automate and make things efficient, and learning new things!
         </p>
       </div>
     </section>
@@ -67,21 +67,20 @@ function Experience() {
         {jobs.map((job) => (
           <div key={job.id} className="flex flex-col sm:flex-row gap-4 sm:gap-8 group">
             <div className="w-full sm:w-1/4 pt-1">
-              <p className="text-sm font-mono text-gray-500 uppercase tracking-wider">
+              <p className="text-sm font-mono text-gray-200 uppercase tracking-wider">
                 {job.date}
               </p>
             </div>
             <div className="w-full sm:w-3/4">
               <h3 className="text-xl font-medium text-white mb-2 flex items-center">
                 {job.title} 
-                <span className="text-gray-400 mx-2">•</span> 
-                <span className="text-gray-300 font-normal">{job.company}</span>
+                <span className="text-gray-200 mx-2">•</span> 
+                <span className="text-gray-200 font-normal">{job.company}</span>
               </h3>
-              <p className="text-gray-400 text-base leading-relaxed">
+              <p className="text-gray-200 text-base leading-relaxed">
                 {job.description}
               </p>
             </div>
-
           </div>
         ))}
       </div>
@@ -99,34 +98,19 @@ function Projects() {
       tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       github: "https://github.com/Eric-Cashman/personal-website",
       external: "",
-      image: "/photos/portfolio-shot.png" 
+      demo: "", // Added empty demo property
+      image: "/personal-website/photos/portfolio-shot.png" 
     },
-    /*
     {
       id: 2,
-      title: "",
-      description: "",
-      tech: [""],
-      github: "",
-      external: ""
-    },
-    {
-      id: 3,
-      title: "",
-      description: "",
-      tech: [""],
-      github: "",
-      external: ""
-    },
-    {
-      id: 4,
-      title: "",
-      description: "",
-      tech: [""],
-      github: "",
-      external: ""
+      title: "Washington Fire Tracker",
+      description: "A web application mapping and tracking active wildfire data across Washington state by counties, and showing which areas are most likely at risk.",
+      tech: ["React", "JavaScript", "Python", "Amazon Kiro", "HTML"], 
+      github: "https://github.com/Eric-Cashman/wa-kiro-fire",
+      external: "",
+      demo: "https://youtu.be/8RNYvv2JVvw", // Added your YouTube link here
+      image: "/personal-website/photos/WAFIREScreenshot.png"
     }
-    */
   ];
 
   return (
@@ -152,7 +136,7 @@ function Projects() {
                     className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300" 
                   />
                 ) : (
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-500 group-hover:text-[#64ffda]/70 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-300 group-hover:text-[#64ffda]/70 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 )}
@@ -177,9 +161,28 @@ function Projects() {
                 )}
               </div>
               
-              <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                {project.description}
-              </p>
+              {/* Wrapped description and demo link together for perfect spacing */}
+              <div className="mb-6">
+                <p className="text-gray-200 text-sm leading-relaxed">
+                  {project.description}
+                </p>
+                
+                {/* Conditionally render the demo link if one exists */}
+                {project.demo && (
+                  <p className="text-sm mt-3">
+                    <span className="text-gray-400">Demo: </span>
+                    <a 
+                      href={project.demo} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-[#64ffda] hover:underline hover:text-white transition-colors"
+                    >
+                      {project.demo}
+                    </a>
+                  </p>
+                )}
+              </div>
+
               <div className="flex flex-wrap gap-2 mt-auto">
                 {project.tech.map((techItem, index) => (
                   <span 
@@ -201,7 +204,7 @@ function Projects() {
 
 export default function App() {
   return (
-    <div className="bg-[#1a1a24] min-h-screen text-white font-sans antialiased relative">
+    <div className="bg-[#0a0a0f] min-h-screen text-white font-sans antialiased relative">
       <ParticleBackground />
       <div className="relative z-10">
         <Header />
@@ -212,6 +215,7 @@ export default function App() {
           <About />
           <Experience />
           <Projects />
+          <Contact />
           
         </main>
       </div>

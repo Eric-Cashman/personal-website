@@ -41,7 +41,8 @@ export default function Header() {
           <a href="#about" className="text-gray-300 hover:text-[#64ffda] text-sm font-mono transition-colors">About</a>
           <a href="#experience" className="text-gray-300 hover:text-[#64ffda] text-sm font-mono transition-colors">Experience</a>
           <a href="#projects" className="text-gray-300 hover:text-[#64ffda] text-sm font-mono transition-colors">Projects</a>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] border border-[#64ffda] px-4 py-2 rounded text-sm font-mono hover:bg-[#64ffda]/10 transition-colors">
+          <a href="#contact" className="text-gray-300 hover:text-[#64ffda] text-sm font-mono transition-colors">Contact</a>
+          <a href="https://Eric-Cashman.github.io/personal-website/resume.pdf?v=1" target="_blank" rel="noopener noreferrer" className="text-[#64ffda] border border-[#64ffda] px-4 py-2 rounded text-sm font-mono hover:bg-[#64ffda]/10 transition-colors">
             Resume
           </a>
         </nav>
