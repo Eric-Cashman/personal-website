@@ -160,14 +160,10 @@ function Projects() {
                   </h3>
                 )}
               </div>
-              
-              {/* Wrapped description and demo link together for perfect spacing */}
               <div className="mb-6">
                 <p className="text-gray-200 text-sm leading-relaxed">
                   {project.description}
                 </p>
-                
-                {/* Conditionally render the demo link if one exists */}
                 {project.demo && (
                   <p className="text-sm mt-3">
                     <span className="text-gray-400">Demo: </span>
