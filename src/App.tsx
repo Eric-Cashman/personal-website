@@ -94,11 +94,11 @@ function Projects() {
     {
       id: 1,
       title: "Custom Personal Website",
-      description: "Personal website use to showcase projects, and skills.",
+      description: "A single-page developer portfolio built to showcase software engineering projects. Features custom particle background animations, smooth scroll navigation, and a modern dark-themed UI optimized for performance and accessibility.",
       tech: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       github: "https://github.com/Eric-Cashman/personal-website",
       external: "",
-      demo: "", // Added empty demo property
+      demo: "",
       image: "/personal-website/photos/portfolio-shot.png" 
     },
     {
@@ -108,7 +108,7 @@ function Projects() {
       tech: ["React", "JavaScript", "Python", "Amazon Kiro", "HTML"], 
       github: "https://github.com/Eric-Cashman/wa-kiro-fire",
       external: "",
-      demo: "https://youtu.be/8RNYvv2JVvw", // Added your YouTube link here
+      demo: "https://youtu.be/8RNYvv2JVvw",
       image: "/personal-website/photos/WAFIREScreenshot.png"
     }
   ];
@@ -198,20 +198,40 @@ function Projects() {
   );
 }
 
+function Footer() {
+  return (
+    <footer className="w-full pt-8 pb-8 mt-auto flex flex-col items-center justify-center text-center">
+      <p className="text-gray-300 text-sm tracking-wide mb-2">
+        <a 
+          href="https://github.com/Eric-Cashman" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="hover:text-[#64ffda] transition-colors"
+        >
+          Designed & Built by Eric Cashman © {new Date().getFullYear()}
+        </a>
+      </p>
+      <p className="text-gray-500 text-xs font-mono">
+        Built with React & Tailwind CSS
+      </p>
+    </footer>
+  );
+}
+
 export default function App() {
   return (
     <div className="bg-[#0a0a0f] min-h-screen text-white font-sans antialiased relative">
       <ParticleBackground />
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col min-h-screen">
         <Header />
-
-        <main className="pt-32 max-w-5xl mx-auto px-6 pb-24">
-          
+        <main className="pt-32 max-w-5xl mx-auto px-6 w-full flex-grow flex flex-col">
           <Hero />
           <About />
           <Experience />
           <Projects />
           <Contact />
+          
+          <Footer />
           
         </main>
       </div>

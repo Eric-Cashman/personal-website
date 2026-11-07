@@ -25,12 +25,12 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${
         isHidden ? '-translate-y-full' : 'translate-y-0'
       } ${
         isScrolled 
-          ? 'bg-[#050505]/95 backdrop-blur-md shadow-lg py-4 border-b border-gray-800' 
-          : 'bg-[#050505] py-6' 
+          ? 'bg-[#050505]/95 backdrop-blur-md shadow-lg py-4 border-gray-800' 
+          : 'bg-[#050505] py-6 border-transparent' 
       }`}
     >
       <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
